@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Planos Mecánicos - Chile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>⚙️ Editor de Planos Mecánicos y P&ID</h1>
+    </div>
+    <div class="container">
+        <div class="toolbar">
+            <h3>Componentes P&ID</h3>
+            <button onclick="agregarBomba()">P Bomba (Centrífuga)</button>
+            <button onclick="agregarValvula()">V Válvula (Genérica)</button>
+            <button onclick="agregarEstanque()">E Estanque/Tanque</button>
+            
+            <h3>Líneas y Tuberías</h3>
+            <button onclick="activarDibujoLinea()">➖ Tubería / Cañería</button>
+            
+            <h3>Accesorios Propios</h3>
+            <button onclick="toggleDibujoLibre()" id="btn-libre">✏️ Dibujo Libre (Custom)</button>
+            
+            <h3>Acciones</h3>
+            <button onclick="limpiarLienzo()" class="btn-danger">🗑️ Limpiar Plano</button>
+            <button onclick="descargarPlano()" class="btn-success">💾 Descargar Plano</button>
+        </div>
+        <div class="canvas-container">
+            <canvas id="planoCanvas" width="800" height="600"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
